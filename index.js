@@ -6,7 +6,10 @@ let myGuess = prompt("Enter your guessed number");
   return Math.floor(Math.random() * (range - 1 + 1) + 1);
 }
   
-  return random(range);
+  let computerGuess = random(range);
+  if(myGuess == computerGuess){
+    console.log(`${username} you won your guess, continue playing`);
+  }
 }
 
 console.log(game(prompt("Enter your max range for the guessing game")));
